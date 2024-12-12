@@ -1,0 +1,195 @@
+/* feed.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px -1000px;
+  background-color: #f5823a;
+}
+
+.logo {
+  height: 130px;
+  margin-right: 20px;
+}
+
+.links {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-left: 100px; /* margem esquerda */ 
+  margin-right: 100px; /* margem direita */
+}
+
+.links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.links li {
+  margin-right: 20px; /* Espaço entre os links */
+}
+
+.links li:last-child {
+  margin-right: 0; /* Remove o espaço extra do último item */
+}
+
+.links a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Cor do texto */
+  font-weight: bold;
+}
+
+.links a:hover {
+  color: #007bff; /* Cor de hover para os links */
+}
+
+.profile-icon {
+  font-size: 20px;
+  margin-bottom: 10px;
+  transform: scale(2); /* aumenta o tamanho em 50% */
+  padding-right: 50px; /* padding esquerdo */
+}
+
+.background-image {
+  background-image: url(/src/gato0.jpg);
+  padding: 28vh; /* Define o tamanho do elemento com base na altura da viewport */
+  background-size: cover; /* A imagem de fundo vai cobrir todo o elemento */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade de 50% */
+  z-index: -1; 
+}
+
+.main-image {
+  width: 700px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+  transform: translateY(-100px);
+}
+
+.gallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.info {
+  font-size: 27px;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.info h2 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+  transform: scale(1.5); /* aumenta o tamanho em 50% */
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.details span {
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.about, .reason {
+  text-align: center;
+  margin-top: 90px; /* ajusta a margem superior para 20 pixels */
+}
+
+.adopt-btn {
+  width: 50px;
+  padding: 15px 80px;
+  margin-top: 60px;
+  font-size: 18px;
+  color: white;
+  background-color: #ff5555;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex; 
+  justify-content: center;
+  justify-items: center;
+  margin-left: 710px;
+  margin-bottom: 100px; /* ajusta a margem inferior para 20 pixels */
+  transform: scale(1.5); /* aumenta o tamanho em 50% */
+}
+
+.adopt-btn:hover {
+  background-color: #ff0000;
+}
+
+.quadrado-laranja {
+  width: 1700px;  /* largura do quadrado */
+  height: 100px; /* altura do quadrado */
+  background-color: #f5823a; /* cor de fundo laranja */
+}
+
+.popup {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0.9; /* Opacidade baixa */
+  text-align: center; /* Centraliza o texto */
+}
+
+.popup .close {
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* Ocultar botão "X" */
+}
+
+.popup .close-btn {
+  margin-top: 20px; /* Espaço acima do botão "Fechar" */
+  padding: 10px 20px;
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup .close-btn:hover {
+  background-color: #585858;
+}
+

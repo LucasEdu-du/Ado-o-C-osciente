@@ -1,0 +1,204 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+/* ===== Estilos do Cabeçalho ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #FFA64D; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-background {
+    background-color: #D9D9D9; 
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.logo-background img {
+    display: block;
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+.logo-background img:hover {
+    transform: scale(1.1); 
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #fff; 
+}
+
+/* ===== Estilos da Seção Principal ===== */
+main {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Título da página de cadastro */
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ===== Estilos do Formulário de Cadastro ===== */
+.cadastro-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.cadastro-container:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Estilos para os campos de entrada */
+.cadastro-container label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.cadastro-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.cadastro-container input:focus {
+    border-color: #F5823A;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 166, 77, 0.5);
+}
+
+/* Botão de envio */
+.cadastro-container button {
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5823A;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cadastro-container button:hover {
+    background-color: #D35400;
+    transform: scale(1.03);
+}
+
+/* Links de navegação (já tem conta, etc.) */
+.cadastro-container .nav-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cadastro-container .nav-links a {
+    color: #F5823A;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cadastro-container .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Imagens ===== */
+.imagens {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cachorroGato {
+    max-width: 150px;  
+    height: auto; 
+    transition: transform 0.3s ease; 
+}
+
+.cachorroGato:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Estilo do Rodapé ===== */
+footer {
+    text-align: center;
+    background-color: #F5823A;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.paw-print {
+    width: 40px;
+    height: 40px;
+    background: url('patinhas-removebg-preview.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.paw-print:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial - Pets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #FFA64D;
+    flex-direction: row;
+}
+   ul{
+    display:flex;
+    flex-direction: row;
+    list-style-type:none;
+   }
+   
+   a{
+    text-decoration: none;
+   }
+
+   li{
+    margin-left: 50px;
+    text-decoration: none;
+   }
+        header img {
+            height: 80px;
+        }
+    .background-cinza {
+    background-color: #D9D9D9;
+    padding: 5px 5px;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+        .location {
+            display: flex;
+            align-items: center;
+            margin: 10px 20px;
+            color: #8b004b;
+            font-size: 18px;
+        }
+
+        .location i {
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .search-bar input {
+            width: 70%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #8b004b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .carrossel {
+            max-width: 250px;
+            margin: 20px auto;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            width: 50px;
+            height: 250px;
+            display: block;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        .carousel .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel .slides img {
+            min-width: 100%;
+            user-select: none;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .section {
+            margin: 20px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .card .info h3 {
+            margin: 0;
+            color: #8b004b;
+            font-size: 18px;
+        }
+
+        .card .info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="background-cinza">
+          <div class="logo-background">
+            <img src="logo.png" alt="Logo AdotePet">
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Home</a></li>
+            <li><a href="busca.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Buscar</a></li>
+            <li><a href="index.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Como Funciona?</a></li>
+            <li><a href="index.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">FAQ</a></li>
+            <li><a href="Login.html" style="color: black; background-color: white; padding: 5px 10px; border-radius: 5px;">Fazer Login</a></li>
+            <li><a href="perfil.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Perfil</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      
+
+    <div class="location">
+        📍 Rua dos Bobos, nº 0 - Egito
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Pesquisar">
+        <button>🔍</button>
+    </div>
+    
+
+    <div class="section">
+        <h2>Pets recentemente visualizados:</h2>
+
+    <div class="carrossel">
+        <div class="carousel">
+            <div class="slides">
+                <img src="cat1.jpg" alt="Gato">
+                <img src="dog1.jpg" alt="Cachorro">
+                <img src="dog2.jpg" alt="Cachorro 2">
+                <img src="dog3.jpeg" alt="Outro Cachorro">
+            </div>
+            <div class="carousel-buttons">
+                <button class="carousel-button" id="prev">❮</button>
+                <button class="carousel-button" id="next">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Pets disponíveis para adoção:</h2>
+
+        <div class="card">
+            <div class="background-cinza">
+                <img src="cat1.jpg" alt="Michael Jackson">
+            </div>
+            <div class="info">
+                <h3>Michael Jackson</h3>
+                <p>Gato filhote de 2 meses</p>
+                <p>Ele tem uma gravata</p>
+                <p>Signo: Câncer</p>
+                <p>Data de adição ao site: 06/11/2024</p>
+                <div class="details">
+                    📍 Carapicuíba
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="background-cinza">
+                <img src="dog1.jpg" alt="Raimundo Nonato">
+            </div>
+            <div class="info">
+                <h3>Raimundo Nonato</h3>
+                <p>Cachorro criança de 2 anos</p>
+                <p>Ele é 3D!</p>
+                <p>Signo: Libra</p>
+                <p>Data de adição ao site: 24/09/2024</p>
+                <div class="details">
+                    📍 Carapicuíba
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="background-cinza">
+                <img src="dog3.jpeg" alt="Charles">
+            </div>
+            <div class="info">
+                <h3>Charles</h3>
+                <p>Tem pelos fofinhos</p>
+                <p>Idade: 1 ano</p>
+                <p>Signo: Capricórnio</p>
+                <p>Data de adição ao site: 17/09/2024</p>
+                <div class="details">
+                    📍 Osasco
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="background-cinza">
+                <img src="dog2.jpg" alt="Gray">
+            </div>
+            <div class="info">
+                <h3>Mano Cachorro</h3>
+                <p>Vive nas ruas, dormindo de olhos abertos</p>
+                <p>Idade: 3 anos</p>
+                <p>Signo: Escorpião</p>
+                <p>Data de adição ao site: 03/10/2024</p>
+                <div class="details">
+                    📍 Osasco
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.children.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.children.length) % slides.children.length;
+            updateCarousel();
+        });
+        document.getElementById("search-input").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        const textContent = card.textContent.toLowerCase();
+        if (textContent.includes(query)) {
+            card.style.display = "flex"; // Mostra o card
+        } else {
+            card.style.display = "none"; // Esconde o card
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

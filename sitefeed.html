@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed de Adoção</title>
+  <link rel="stylesheet" href="./cssRicardo/feed.css">
+  <style>
+    .popup {
+      display: none; /* Inicialmente oculto */
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      opacity: 0.9; /* Opacidade baixa */
+      text-align: center; /* Centraliza o texto */
+    }
+
+    .popup .close {
+      font-size: 20px;
+      cursor: pointer;
+      display: none; /* Ocultar botão "X" */
+    }
+
+    .popup .close-btn {
+      margin-top: 20px; /* Espaço acima do botão "Fechar" */
+      padding: 10px 20px;
+      background-color: #ff5555;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup .close-btn:hover {
+      background-color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <section>
+      <img src="./srcRicardo/logo.png" alt="Logo" class="logo">
+    </section>
+    
+    <nav class="links">
+      <ul>
+        <li><a href="index.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Home</a></li>
+        <li><a href="busca.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Buscar</a></li>
+        <li><a href="index.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Como Funciona?</a></li>
+        <li><a href="Login.html" style="color: black; background-color: white; padding: 5px 10px; border-radius: 5px;">Fazer Login</a></li>
+        <li><a href="perfil.html" style="color:black; background-color: white; padding: 5px 10px; border-radius: 5px;">Perfil</a></li>          
+      </ul>     
+    </nav>
+    <div class="profile-icon">👤</div>
+  </header>
+
+  <section class="main">
+    <div class="background-image">
+    </div>
+    <div class="gallery">
+      <img src="./srcRicardo/gato2.jpg" alt="Foto 1">
+      <img src="./srcRicardo/gato1.jpg" alt="Foto 2">
+      <img src="./srcRicardo/gato3.jpg" alt="Foto 3">
+    </div>
+    <div class="info">
+      <h2>Ximbinha</h2>
+      <p>Exilador de Pet</p>
+      <div class="contact-icons">
+        <span>📞</span>
+        <span>💬</span>
+      </div>
+      <div class="details">
+        <span>2 anos</span>
+        <span>Vira-Lata</span>
+        <span>Macho</span>
+      </div>
+    </div>
+    <div class="about">
+      <h3>Sobre</h3>
+      <p>O gato é muito legal e vai ser seu amigo pelo resto da vida...</p>
+    </div>
+    <div class="reason">
+      <h3>Motivo</h3>
+      <p>Ele é bonito</p>
+    </div>
+    <button class="adopt-btn">Adotar</button>
+    <div class="quadrado-laranja"></div>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+      <p>Para adotar esse pet ou saber mais sobre ele, entre em contato com o protetor:
+        projetoludpet@outlook.com
+        (11) 94999-3778</p>
+      <button class="close-btn">Fechar</button>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const popup = document.getElementById('popup');
+      const adoptBtn = document.querySelector('.adopt-btn');
+      const closeBtn = document.querySelector('.popup .close-btn');
+
+      adoptBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target == popup) {
+          popup.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
